@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>官公庁のIT入札案件を選別してメール配信｜入札フィット</title>
+<meta name="description" content="官公庁・自治体のIT入札公告を資格等級・地域・実績要件で照合し、「適合」「参考」に分けて根拠付きで毎営業日の朝にメール配信。中小SIer・IT事業者の公共営業向け。月額14,800円（税抜）。">
+<meta property="og:title" content="入札フィット｜官公庁のIT入札案件を選別してメール配信">
+<meta property="og:description" content="資格等級・地域・実績要件で照合し、読むべき案件だけを根拠付きで毎朝配信。">
+<meta property="og:type" content="website">
+<link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill="%23173f5f" width="32" height="32"/><text x="16" y="23" font-size="18" fill="white" text-anchor="middle" font-family="sans-serif">入</text></svg>'>
+<style>
+:root{
+  --primary:#173f5f; --primary-dark:#0f304a; --accent:#0b6b53;
+  --text:#20272f; --muted:#52606d; --line:#cbd5df; --line-strong:#b8c6d1;
+  --bg:#ffffff; --bg-alt:#f3f6f8; --focus:#d97706;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+     color:var(--text);background:var(--bg);line-height:1.75;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+a{color:var(--primary)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 16px}
+.skip:focus{left:8px;top:8px;z-index:10}
+header{border-bottom:1px solid var(--line);background:var(--bg)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0}
+.logo{font-size:1.2rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:.02em}
+.beta{display:inline-block;margin-left:8px;padding:2px 6px;border-radius:2px;background:#e9f0f4;
+      color:#31566f;font-size:11px;font-weight:600;letter-spacing:.08em;vertical-align:2px}
+.cta,.cta-s{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;
+     border-radius:3px;font-weight:700;box-shadow:none}
+.cta{padding:13px 28px;font-size:1rem;min-height:48px}
+.cta-s{padding:9px 18px;font-size:.9rem}
+.cta:hover,.cta-s:hover{background:var(--primary-dark)}
+.cta-note{margin-top:10px;font-size:.88rem;color:var(--muted)}
+/* hero */
+.hero{padding:56px 0 64px;background:#fff;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:56px;align-items:center}
+.eyebrow{font-size:.9rem;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:14px}
+.hero h1{font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.45;letter-spacing:.01em;font-weight:700}
+.hero .sub{margin-top:18px;color:var(--muted);max-width:34em}
+/* mail sample */
+.mail{border:1px solid var(--line-strong);border-radius:2px;box-shadow:0 8px 24px rgba(22,50,79,.08);
+      background:#fff;font-size:.85rem;line-height:1.6}
+.mail-head{background:var(--bg-alt);border-bottom:1px solid var(--line);padding:10px 16px}
+.mail-head .subj{font-weight:700}
+.mail-head .from{color:var(--muted);font-size:.8rem}
+.mail-item{padding:13px 16px;border-bottom:1px solid var(--line)}
+.mail-item:last-of-type{border-bottom:0}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:2px;margin-right:6px;vertical-align:1px}
+.tag.fit{color:var(--accent);border:1px solid var(--accent);background:#f0f7f5}
+.tag.ref{color:var(--muted);border:1px solid var(--line-strong);background:var(--bg-alt)}
+.mail-item .t{font-weight:700}
+.mail-item .m{color:var(--muted);font-size:.8rem;margin-top:2px}
+.mail-item .m a{color:var(--primary)}
+.mail-cap{padding:9px 16px;background:var(--bg-alt);border-top:1px solid var(--line);color:var(--muted);font-size:.75rem}
+/* sections */
+section{padding:64px 0}
+section.alt{background:var(--bg-alt)}
+h2{font-size:1.5rem;font-weight:700;line-height:1.45;margin:0 0 24px;padding-left:14px;border-left:4px solid var(--primary)}
+.note{font-size:.82rem;color:var(--muted);margin-top:16px}
+/* numbers */
+.numbers{display:flex;gap:0;flex-wrap:wrap;border-block:1px solid var(--line);margin:24px 0}
+.num{flex:1 1 200px;border-left:1px solid var(--line);padding:16px 24px}
+.num:first-child{border-left:0}
+.num .v{font-size:1.7rem;font-weight:700;color:var(--primary)}
+.num .v.hit{color:var(--accent)}
+.num .l{font-size:.85rem;color:var(--muted)}
+.lead{max-width:44em}
+/* features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-block:1px solid var(--line)}
+.feat{border-left:1px solid var(--line);padding:26px 24px}
+.feat:first-child{border-left:0}
+.feat h3{font-size:1.05rem;margin-bottom:10px;color:var(--primary)}
+.feat p{font-size:.95rem;color:#39434e}
+@media (max-width:820px){
+  .features{grid-template-columns:1fr}
+  .feat{border-left:0;border-top:1px solid var(--line)}
+  .feat:first-child{border-top:0}
+  .num{border-left:0;border-top:1px solid var(--line);flex-basis:100%}
+  .num:first-child{border-top:0}
+}
+/* steps */
+.steps{counter-reset:step;max-width:44em}
+.steps li{list-style:none;position:relative;padding:0 0 18px 52px}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:2px;
+  width:34px;height:34px;border:1px solid var(--primary);color:var(--primary);border-radius:2px;
+  display:flex;align-items:center;justify-content:center;font-weight:700}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.92rem}
+/* honest */
+.honest{max-width:46em;background:#faf9f5;border-left:4px solid #8a6d1d;padding:22px 26px}
+.honest h2{border-left:0;padding-left:0;font-size:1.15rem;margin-bottom:12px}
+.honest ul{padding-left:1.3em}
+.honest li{margin-bottom:10px;font-size:.95rem}
+/* pricing */
+.price-card{max-width:720px;border:1px solid var(--line-strong);border-radius:4px;background:#fff;padding:30px 32px}
+.price-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px}
+.price{font-size:clamp(1.6rem,6vw,2.1rem);font-weight:700;color:var(--primary)}
+.tax{color:var(--muted);font-size:.9rem}
+.price-card table{width:100%;border-collapse:collapse;font-size:.93rem;margin-bottom:22px}
+.price-card th,.price-card td{text-align:left;padding:9px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+.price-card th{width:32%;font-weight:600;color:var(--muted)}
+/* faq */
+.faq{max-width:46em}
+.faq dt{font-weight:700;margin-top:20px}
+.faq dd{margin-top:4px;color:#39434e;font-size:.95rem}
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--bg-alt);padding:36px 0;font-size:.875rem;color:var(--muted)}
+footer nav{margin-bottom:14px}
+footer nav a{margin-right:18px;color:var(--muted)}
+footer address{font-style:normal}
+.sources{border-top:1px dashed var(--line-strong);margin-top:16px;padding-top:14px;font-size:.8rem;line-height:1.8}
+a,td{overflow-wrap:anywhere}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .hero{padding:40px 0 48px}
+  section{padding:48px 0}
+  .price-card th{width:38%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">入札フィット<span class="beta">BETA</span></a>
+    <a class="cta-s" href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A%E6%B3%95%E4%BA%BA%E7%95%AA%E5%8F%B7%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A">無料サンプル</a>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">中小SIer・IT事業者の公共営業向け</p>
+      <h1>官公庁のIT入札、<br>読むべき案件だけを毎朝。</h1>
+      <p class="sub">入札フィットは、官公庁・自治体のIT・システム案件の入札公告を貴社の<strong>資格等級・地域・実績要件</strong>で照合し、「適合」「参考」に分けて<strong>根拠付き</strong>で毎営業日の朝に届ける情報サービスです。最終的な応札可否は、各案件に付く原典リンクからご確認いただけます。</p>
+      <p style="margin-top:26px"><a class="cta" href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A%E6%B3%95%E4%BA%BA%E7%95%AA%E5%8F%B7%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A">無料サンプルを申し込む</a></p>
+      <p class="cta-note">メールアドレスだけでOK（直近5営業日の配信例をお送りします）。会社名・法人番号を書き添えていただければ、貴社条件で選別した自社向け版を作成します。<strong>1営業日以内に送付・営業電話はしません。</strong></p>
+    </div>
+    <div class="mail" role="img" aria-label="配信メールの見本">
+      <div class="mail-head">
+        <div class="subj">【入札フィット】8/18(火) 新着 適合2件・参考1件</div>
+        <div class="from">入札フィット日次配信 &lt;alerts@…&gt;</div>
+      </div>
+      <div class="mail-item">
+        <span class="tag fit">適合</span><span class="t">臨床研究支援業務管理システム構築業務 一式</span>
+        <div class="m">国立がん研究センター｜入札書提出期限 <strong>9/7(月)</strong><br>
+        根拠: 等級A〜D可（「A,B,C又はDの等級に格付け」）・常駐要件なし｜<a href="#">原典（公告PDF）</a></div>
+      </div>
+      <div class="mail-item">
+        <span class="tag fit">適合</span><span class="t">釧路地方裁判所及び標津簡易裁判所庁舎LAN配線敷設等業務</span>
+        <div class="m">最高裁判所｜入札書提出期限 <strong>9/3(木)</strong><br>
+        根拠: 等級C/D可・常駐要件なし｜<a href="#">原典（調達ポータル）</a></div>
+      </div>
+      <div class="mail-item">
+        <span class="tag ref">参考</span><span class="t">【磐城国道事務所】ホームページ運用等業務委託</span>
+        <div class="m">国土交通省｜等級C適合・<strong>提出期限は本文に記載なし</strong>→原典でご確認ください｜<a href="#">原典</a></div>
+      </div>
+      <div class="mail-cap">実際の配信メール（2026年8月18日配信分）からの抜粋。案件はすべて実在の公告です。</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>その2〜3件のために、毎日460件に目を通しますか？</h2>
+    <div class="numbers">
+      <div class="num"><div class="v">約460件</div><div class="l">1日の入札公告</div></div>
+      <div class="num"><div class="v">16件</div><div class="l">うちIT・システム関連</div></div>
+      <div class="num"><div class="v hit">2〜3件</div><div class="l">応札要件が合う案件</div></div>
+    </div>
+    <p class="lead">キーワード検索では、資格等級が合わない案件・常駐で通えない案件・実績要件を満たせない案件が大量に混ざります。絞り込むのは、結局いつも人の目です。</p>
+    <p class="note">数値は2026年8月17日〜21日の5営業日、官公需情報ポータルサイトAPIで取得した公告2,295件を全文分類した実測値。「応札要件が合う案件」はモデル企業条件（全省庁統一資格C/D級・関東圏・Web系システム開発）での選別例で、貴社の資格・地域により件数は変わります。</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>入札フィットがすること</h2>
+    <div class="features">
+      <div class="feat">
+        <h3>検索結果ではなく、適合判定</h3>
+        <p>資格等級・地域/常駐・実績要件（ISMS/Pマーク・同種実績）・契約形態・締切の軸で1件ずつ照合し、「適合」「参考」に分けて配信。判定根拠は公告の原文つきで併記します。</p>
+      </div>
+      <div class="feat">
+        <h3>設定不要。法人番号だけ</h3>
+        <p>お申込み時の法人番号から、公的な資格者名簿にある貴社の全省庁統一資格の等級・営業品目・競争参加地域を照合し、配信プロファイルを自動生成。検索条件の設計は不要です。</p>
+      </div>
+      <div class="feat">
+        <h3>すべての案件に原典リンク</h3>
+        <p>配信する全案件に発注機関の公告（原典）への直リンクを付けます。応札の最終判断は、必ず一次情報で確認できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>ご利用開始まで</h2>
+    <ol class="steps">
+      <li><b>お申込み</b><span>法人番号とメールアドレスをご登録いただきます。</span></li>
+      <li><b>プロファイル自動生成</b><span>公的名簿から貴社の資格等級・営業品目・地域を照合します。修正のご要望はメールで承り、翌配信分から反映します。</span></li>
+      <li><b>翌営業日の朝から配信</b><span>毎営業日の朝、新着の適合案件をメールでお届けします。</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="honest">
+      <h2>対象範囲と制約</h2>
+      <ul>
+        <li><strong>網羅性は保証しません。</strong>情報源は公的機関の公式・公開データに限定しており、一部の機関（ID/パスワード制の調達サイト等）は構造的に対象外です。全件網羅が必要な場合は網羅型サービスをご検討ください。</li>
+        <li><strong>配信は公表の翌営業日以降になります</strong>（公的集約データベースの更新周期によるものです）。</li>
+        <li>公告本文から要件を確定できない案件は「参考」として区別して配信します。適合と偽って混ぜることはしません。</li>
+        <li>対象は国・独立行政法人・地方公共団体のIT・システム関連の役務案件です。物品購入のみの案件・建設工事は対象外です。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>料金</h2>
+    <div class="price-card">
+      <div class="price-row">
+        <span class="price">月額 14,800円</span><span class="tax">税抜（税込 16,280円）</span>
+      </div>
+      <table>
+        <tr><th>含まれるもの</th><td>毎営業日の朝の適合案件配信、配信プロファイルの自動生成と修正対応</td></tr>
+        <tr><th>契約単位</th><td>1ヶ月・自動更新。最低利用期間なし</td></tr>
+        <tr><th>解約・返金</th><td>カスタマーポータルからいつでも即時解約。未経過分は日割で自動返金（<a href="refund.html">返金ポリシー</a>）</td></tr>
+        <tr><th>支払方法</th><td>クレジットカード（Stripe）。領収書データを毎月自動発行</td></tr>
+        <tr><th>ベータ特典</th><td>ベータ期間中の値上げは既存契約に適用しません</td></tr>
+      </table>
+      <!-- TODO: 本番Stripe Payment Linkに差し替え（現状はテスト環境のみ） -->
+      <a class="cta" href="mailto:ebie@sprouthead.com?subject=%E5%85%A5%E6%9C%AD%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E7%94%B3%E8%BE%BC%E5%B8%8C%E6%9C%9B">申込について問い合わせる</a>
+      <p class="cta-note">まずは<a href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B">無料サンプル</a>で配信内容をお確かめください。</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>よくある質問</h2>
+    <dl class="faq">
+      <dt>Q. 対象の案件範囲は？</dt>
+      <dd>A. 国・独立行政法人・地方公共団体が公表するIT・システム関連の役務案件（開発・保守・運用・データ業務等）です。物品購入のみの案件・建設工事は対象外です。</dd>
+      <dt>Q. 全省庁統一資格を持っていなくても使えますか？</dt>
+      <dd>A. 使えます。等級を問わない案件や地方自治体の案件も配信対象です。</dd>
+      <dt>Q. どうやって「適合」と判定していますか？</dt>
+      <dd>A. 公告本文から資格等級・地域/常駐条件・実績要件・契約形態・締切を抽出し、貴社のプロファイルと突き合わせています。判定根拠は配信メールに原文つきで併記します。</dd>
+      <dt>Q. 判定が間違っていたら？</dt>
+      <dd>A. メールでご連絡ください。事実を確認のうえプロファイルや判定を修正し、誤配信については当該月の料金を上限に個別に返金対応します（<a href="refund.html">返金ポリシー</a>）。</dd>
+      <dt>Q. 解約したら日割で返ってきますか？</dt>
+      <dd>A. はい。解約は即時に有効となり、当月の未経過分は自動で日割返金されます。</dd>
+      <dt>Q. 請求書・領収書は発行されますか？</dt>
+      <dd>A. 決済ごとに領収書データが自動発行されます（インボイス対応の要否はお問い合わせください）。</dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="フッター">
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="terms.html">利用規約</a>
+      <a href="refund.html">返金ポリシー</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <address>運営: 合同会社スプラウトヘッド ／ お問い合わせ: <a href="mailto:ebie@sprouthead.com">ebie@sprouthead.com</a></address>
+    <div class="sources">
+      本サービスは、官公需情報ポータルサイトの検索APIを利用しています（<a href="https://www.kkj.go.jp/" rel="noopener">官公需情報ポータルサイト</a>）。<br>
+      出典: <a href="https://www.p-portal.go.jp/" rel="noopener">調達ポータル</a>、<a href="https://www.e-gov.go.jp/" rel="noopener">e-Govポータル</a> ほか各発注機関の公表情報。<br>
+      掲載情報は sprouthead が独自の基準で選別・編集・加工したものであり、国等が作成した未加工の情報ではありません。
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
