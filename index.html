@@ -121,6 +121,14 @@ a,td{overflow-wrap:anywhere}
   section{padding:48px 0}
   .price-card th{width:38%}
 }
+.sample-form{max-width:560px}
+.sample-form label{display:block;margin:0 0 14px;font-weight:600}
+.sample-form input[type=email],.sample-form input[type=text]{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:10px 12px;font-size:1rem;border:1px solid var(--line);border-radius:6px;font-weight:400;font-family:inherit}
+.sample-form label.check{font-weight:400;display:flex;gap:10px;align-items:flex-start;line-height:1.6}
+.sample-form label.check input{margin-top:5px;width:18px;height:18px;flex:none}
+.sample-form .req{font-size:.75rem;color:#b91c1c;margin-left:6px;font-weight:600}
+.sample-form button.cta{border:0;cursor:pointer;font-family:inherit;margin-top:6px}
+.sample-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -139,7 +147,7 @@ a,td{overflow-wrap:anywhere}
 <header>
   <div class="wrap nav">
     <a class="logo" href="/">入札フィット<span class="beta">BETA</span></a>
-    <a class="cta-s" href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A%E6%B3%95%E4%BA%BA%E7%95%AA%E5%8F%B7%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A">無料サンプル</a>
+    <a class="cta-s" href="#sample">無料サンプル</a>
   </div>
 </header>
 
@@ -150,8 +158,8 @@ a,td{overflow-wrap:anywhere}
     <div>
       <p class="eyebrow">中小SIer・IT事業者の公共営業向け</p>
       <h1>官公庁のIT入札、<br>読むべき案件だけを毎朝。</h1>
-      <p class="sub">入札フィットは、官公庁・自治体のIT・システム案件の入札公告を貴社の<strong>資格等級・地域・実績要件</strong>で照合し、「適合」「参考」に分けて<strong>根拠付き</strong>で毎営業日の朝に届ける情報サービスです。最終的な応札可否は、各案件に付く原典リンクからご確認いただけます。</p>
-      <p style="margin-top:26px"><a class="cta" href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A%E6%B3%95%E4%BA%BA%E7%95%AA%E5%8F%B7%EF%BC%88%E4%BB%BB%E6%84%8F%EF%BC%89%EF%BC%9A%0A">無料サンプルを申し込む</a></p>
+      <p class="sub">入札フィットは、官公庁・自治体のIT・システム案件の入札公告を貴社の<strong>資格等級・地域・実績要件</strong>で照合し、「適合」「参考」に分けて<strong>根拠付き</strong>で毎営業日の朝に届ける情報サービスです。AIを含む自動処理で候補を提示するものであり、最終的な応札可否は各案件に付く原典リンクからご確認ください。</p>
+      <p style="margin-top:26px"><a class="cta" href="#sample">無料サンプルを申し込む</a></p>
       <p class="cta-note">メールアドレスだけでOK（直近5営業日の配信例をお送りします）。会社名・法人番号を書き添えていただければ、貴社条件で選別した自社向け版を作成します。<strong>1営業日以内に送付・営業電話はしません。</strong></p>
     </div>
     <div class="mail" role="img" aria-label="配信メールの見本">
@@ -196,8 +204,8 @@ a,td{overflow-wrap:anywhere}
     <h2>入札フィットがすること</h2>
     <div class="features">
       <div class="feat">
-        <h3>検索結果ではなく、適合判定</h3>
-        <p>資格等級・地域/常駐・実績要件（ISMS/Pマーク・同種実績）・契約形態・締切の軸で1件ずつ照合し、「適合」「参考」に分けて配信。判定根拠は公告の原文つきで併記します。</p>
+        <h3>検索ではなく、貴社条件での適合候補の提示</h3>
+        <p>資格等級・地域/常駐・実績要件（ISMS/Pマーク・同種実績）・契約形態・締切の軸で1件ずつ照合し、「適合」「参考」に分けて候補を配信。根拠は公告の原文つきで併記します。応札可否の判断は貴社が原典を確認のうえ行ってください。</p>
       </div>
       <div class="feat">
         <h3>設定不要。法人番号だけ</h3>
@@ -217,7 +225,7 @@ a,td{overflow-wrap:anywhere}
     <ol class="steps">
       <li><b>お申込み</b><span>法人番号とメールアドレスをご登録いただきます。</span></li>
       <li><b>プロファイル自動生成</b><span>公的名簿から貴社の資格等級・営業品目・地域を照合します。修正のご要望はメールで承り、翌配信分から反映します。</span></li>
-      <li><b>翌営業日の朝から配信</b><span>毎営業日の朝、新着の適合案件をメールでお届けします。</span></li>
+      <li><b>翌営業日の朝から配信</b><span>毎営業日の朝、新着の適合候補をメールでお届けします。</span></li>
     </ol>
   </div>
 </section>
@@ -227,10 +235,12 @@ a,td{overflow-wrap:anywhere}
     <div class="honest">
       <h2>対象範囲と制約</h2>
       <ul>
+        <li><strong>AIを含む自動処理で候補を提示します。</strong>入札フィットは、AIを含む自動処理で公告を分類・抽出し、貴社の登録条件に合致する候補を提示します。応札可否の判断は貴社が原典を確認のうえ行ってください。判定・抽出には誤りが含まれることがあります。</li>
         <li><strong>網羅性は保証しません。</strong>情報源は公的機関の公式・公開データに限定しており、一部の機関（ID/パスワード制の調達サイト等）は構造的に対象外です。全件網羅が必要な場合は網羅型サービスをご検討ください。</li>
         <li><strong>配信は公表の翌営業日以降になります</strong>（公的集約データベースの更新周期によるものです）。</li>
         <li>公告本文から要件を確定できない案件は「参考」として区別して配信します。適合と偽って混ぜることはしません。</li>
         <li>対象は国・独立行政法人・地方公共団体のIT・システム関連の役務案件です。物品購入のみの案件・建設工事は対象外です。</li>
+        <li><strong>配信精度の評価セットは2021〜2026年度の落札実績に基づきます。</strong>情報処理・ソフトウェア開発の資格で公的機関の案件を落札した事業者の実績から作った評価データで精度を測っており、その範囲に現れない案件や事業者での精度は未測定です。</li>
       </ul>
     </div>
   </div>
@@ -244,7 +254,7 @@ a,td{overflow-wrap:anywhere}
         <span class="price">月額 14,800円</span><span class="tax">税抜（税込 16,280円）</span>
       </div>
       <table>
-        <tr><th>含まれるもの</th><td>毎営業日の朝の適合案件配信、配信プロファイルの自動生成と修正対応</td></tr>
+        <tr><th>含まれるもの</th><td>毎営業日の朝の適合候補の配信、配信プロファイルの自動生成と修正対応</td></tr>
         <tr><th>契約単位</th><td>1ヶ月・自動更新。最低利用期間なし</td></tr>
         <tr><th>解約・返金</th><td>カスタマーポータルからいつでも即時解約。未経過分は日割で自動返金（<a href="refund.html">返金ポリシー</a>）</td></tr>
         <tr><th>支払方法</th><td>クレジットカード（Stripe）。領収書データを毎月自動発行</td></tr>
@@ -252,8 +262,24 @@ a,td{overflow-wrap:anywhere}
       </table>
       <!-- TODO: 本番Stripe Payment Linkに差し替え（現状はテスト環境のみ） -->
       <a class="cta" href="mailto:ebie@sprouthead.com?subject=%E5%85%A5%E6%9C%AD%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E7%94%B3%E8%BE%BC%E5%B8%8C%E6%9C%9B">申込について問い合わせる</a>
-      <p class="cta-note">まずは<a href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B">無料サンプル</a>で配信内容をお確かめください。</p>
+      <p class="cta-note">まずは<a href="#sample">無料サンプル</a>で配信内容をお確かめください。</p>
     </div>
+  </div>
+</section>
+
+<section id="sample">
+  <div class="wrap">
+    <h2>無料サンプルを申し込む</h2>
+    <form class="sample-form" method="post" action="https://api.nyusatsu-fit.jp/signup" accept-charset="UTF-8">
+      <input type="hidden" name="consent_version" value="consent-v1-2026-09-03">
+      <div class="hp" aria-hidden="true"><label>このフィールドは空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.co.jp"></label>
+      <label>会社名（任意）<input type="text" name="company_name" autocomplete="organization"></label>
+      <label>法人番号（任意・13桁）<input type="text" name="corporate_number" inputmode="numeric" pattern="[0-9]{13}" title="13桁の数字"></label>
+      <label class="check"><input type="checkbox" name="consent" value="on" required>入札フィットからの無料サンプルと案内メールの受信に同意します。配信はいつでも停止できます（<a href="privacy.html">プライバシーポリシー</a>）。</label>
+      <button type="submit" class="cta">無料サンプルを申し込む</button>
+      <p class="cta-note">直近5営業日の配信例を<strong>1営業日以内</strong>にお送りします。会社名・法人番号をご記入いただければ、貴社条件で選別した自社向け版を作成します。営業電話はしません。フォームが使えない場合は<a href="mailto:ebie@sprouthead.com?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B">メール</a>でも受け付けます。</p>
+    </form>
   </div>
 </section>
 
