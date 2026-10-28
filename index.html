@@ -7,129 +7,11 @@
 <title>官公庁のIT入札案件を選別してメール配信｜入札フィット</title>
 <meta name="description" content="官公庁・自治体のIT入札公告を資格等級・地域・実績要件で照合し、「適合」「参考」に分けて根拠付きで毎営業日の朝にメール配信。中小SIer・IT事業者の公共営業向け。月額14,800円（税抜）。">
 <meta property="og:title" content="入札フィット｜官公庁のIT入札案件を選別してメール配信">
-<meta property="og:description" content="資格等級・地域・実績要件で照合し、読むべき案件だけを根拠付きで毎朝配信。">
+<meta property="og:description" content="資格等級・地域・実績要件で照合し、自社条件に合うIT入札候補を根拠付きで毎朝配信。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nyusatsu-fit.jp/">
-<link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill="%23173f5f" width="32" height="32"/><text x="16" y="23" font-size="18" fill="white" text-anchor="middle" font-family="sans-serif">入</text></svg>'>
-<style>
-:root{
-  --primary:#173f5f; --primary-dark:#0f304a; --accent:#0b6b53;
-  --text:#20272f; --muted:#52606d; --line:#cbd5df; --line-strong:#b8c6d1;
-  --bg:#ffffff; --bg-alt:#f3f6f8; --focus:#d97706;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
-     color:var(--text);background:var(--bg);line-height:1.75;font-size:16px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-a{color:var(--primary)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 16px}
-.skip:focus{left:8px;top:8px;z-index:10}
-header{border-bottom:1px solid var(--line);background:var(--bg)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 0}
-.logo{font-size:1.2rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:.02em}
-.beta{display:inline-block;margin-left:8px;padding:2px 6px;border-radius:2px;background:#e9f0f4;
-      color:#31566f;font-size:11px;font-weight:600;letter-spacing:.08em;vertical-align:2px}
-.cta,.cta-s{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;
-     border-radius:3px;font-weight:700;box-shadow:none}
-.cta{padding:13px 28px;font-size:1rem;min-height:48px}
-.cta-s{padding:9px 18px;font-size:.9rem}
-.cta:hover,.cta-s:hover{background:var(--primary-dark)}
-.cta-note{margin-top:10px;font-size:.88rem;color:var(--muted)}
-/* hero */
-.hero{padding:56px 0 64px;background:#fff;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:56px;align-items:center}
-.eyebrow{font-size:.9rem;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:14px}
-.hero h1{font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.45;letter-spacing:.01em;font-weight:700}
-.hero .sub{margin-top:18px;color:var(--muted);max-width:34em}
-/* mail sample */
-.mail{border:1px solid var(--line-strong);border-radius:2px;box-shadow:0 8px 24px rgba(22,50,79,.08);
-      background:#fff;font-size:.85rem;line-height:1.6}
-.mail-head{background:var(--bg-alt);border-bottom:1px solid var(--line);padding:10px 16px}
-.mail-head .subj{font-weight:700}
-.mail-head .from{color:var(--muted);font-size:.8rem}
-.mail-item{padding:13px 16px;border-bottom:1px solid var(--line)}
-.mail-item:last-of-type{border-bottom:0}
-.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:2px;margin-right:6px;vertical-align:1px}
-.tag.fit{color:var(--accent);border:1px solid var(--accent);background:#f0f7f5}
-.tag.ref{color:var(--muted);border:1px solid var(--line-strong);background:var(--bg-alt)}
-.mail-item .t{font-weight:700}
-.mail-item .m{color:var(--muted);font-size:.8rem;margin-top:2px}
-.mail-item .m a{color:var(--primary)}
-.mail-cap{padding:9px 16px;background:var(--bg-alt);border-top:1px solid var(--line);color:var(--muted);font-size:.75rem}
-/* sections */
-section{padding:64px 0}
-section.alt{background:var(--bg-alt)}
-h2{font-size:1.5rem;font-weight:700;line-height:1.45;margin:0 0 24px;padding-left:14px;border-left:4px solid var(--primary)}
-.note{font-size:.82rem;color:var(--muted);margin-top:16px}
-/* numbers */
-.numbers{display:flex;gap:0;flex-wrap:wrap;border-block:1px solid var(--line);margin:24px 0}
-.num{flex:1 1 200px;border-left:1px solid var(--line);padding:16px 24px}
-.num:first-child{border-left:0}
-.num .v{font-size:1.7rem;font-weight:700;color:var(--primary)}
-.num .v.hit{color:var(--accent)}
-.num .l{font-size:.85rem;color:var(--muted)}
-.lead{max-width:44em}
-/* features */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-block:1px solid var(--line)}
-.feat{border-left:1px solid var(--line);padding:26px 24px}
-.feat:first-child{border-left:0}
-.feat h3{font-size:1.05rem;margin-bottom:10px;color:var(--primary)}
-.feat p{font-size:.95rem;color:#39434e}
-@media (max-width:820px){
-  .features{grid-template-columns:1fr}
-  .feat{border-left:0;border-top:1px solid var(--line)}
-  .feat:first-child{border-top:0}
-  .num{border-left:0;border-top:1px solid var(--line);flex-basis:100%}
-  .num:first-child{border-top:0}
-}
-/* steps */
-.steps{counter-reset:step;max-width:44em}
-.steps li{list-style:none;position:relative;padding:0 0 18px 52px}
-.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:2px;
-  width:34px;height:34px;border:1px solid var(--primary);color:var(--primary);border-radius:2px;
-  display:flex;align-items:center;justify-content:center;font-weight:700}
-.steps b{display:block}
-.steps span{color:var(--muted);font-size:.92rem}
-/* honest */
-.honest{max-width:46em;background:#faf9f5;border-left:4px solid #8a6d1d;padding:22px 26px}
-.honest h2{border-left:0;padding-left:0;font-size:1.15rem;margin-bottom:12px}
-.honest ul{padding-left:1.3em}
-.honest li{margin-bottom:10px;font-size:.95rem}
-/* pricing */
-.price-card{max-width:720px;border:1px solid var(--line-strong);border-radius:4px;background:#fff;padding:30px 32px}
-.price-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px}
-.price{font-size:clamp(1.6rem,6vw,2.1rem);font-weight:700;color:var(--primary)}
-.tax{color:var(--muted);font-size:.9rem}
-.price-card table{width:100%;border-collapse:collapse;font-size:.93rem;margin-bottom:22px}
-.price-card th,.price-card td{text-align:left;padding:9px 4px;border-bottom:1px solid var(--line);vertical-align:top}
-.price-card th{width:32%;font-weight:600;color:var(--muted)}
-/* faq */
-.faq{max-width:46em}
-.faq dt{font-weight:700;margin-top:20px}
-.faq dd{margin-top:4px;color:#39434e;font-size:.95rem}
-/* footer */
-footer{border-top:1px solid var(--line);background:var(--bg-alt);padding:36px 0;font-size:.875rem;color:var(--muted)}
-footer nav{margin-bottom:14px}
-footer nav a{margin-right:18px;color:var(--muted)}
-footer address{font-style:normal}
-.sources{border-top:1px dashed var(--line-strong);margin-top:16px;padding-top:14px;font-size:.8rem;line-height:1.8}
-a,td{overflow-wrap:anywhere}
-@media (max-width:820px){
-  .hero .wrap{grid-template-columns:1fr;gap:32px}
-  .hero{padding:40px 0 48px}
-  section{padding:48px 0}
-  .price-card th{width:38%}
-}
-.sample-form{max-width:560px}
-.sample-form label{display:block;margin:0 0 14px;font-weight:600}
-.sample-form input[type=email],.sample-form input[type=text]{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:10px 12px;font-size:1rem;border:1px solid var(--line);border-radius:6px;font-weight:400;font-family:inherit}
-.sample-form label.check{font-weight:400;display:flex;gap:10px;align-items:flex-start;line-height:1.6}
-.sample-form label.check input{margin-top:5px;width:18px;height:18px;flex:none}
-.sample-form .req{font-size:.75rem;color:#b91c1c;margin-left:6px;font-weight:600}
-.sample-form button.cta{border:0;cursor:pointer;font-family:inherit;margin-top:6px}
-.sample-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-</style>
+<link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 72 72%22 role=%22img%22 aria-label=%22%E5%85%A5%E6%9C%AD%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%22%3E%3Cg transform=%22matrix%28.6222539674 -.7071067812 .6222539674 .7071067812 5 32%29%22%3E%3Cpath fill=%22%23173f5f%22 d=%22M0 1.8A1.8 1.8 0 0 1 1.8 0L28.2 0A1.8 1.8 0 0 1 30 1.8L30 6.2A1.8 1.8 0 0 1 28.2 8L9.8 8A1.8 1.8 0 0 0 8 9.8L8 30.2A1.8 1.8 0 0 0 9.8 32L28.2 32A1.8 1.8 0 0 1 30 33.8L30 38.2A1.8 1.8 0 0 1 28.2 40L1.8 40A1.8 1.8 0 0 1 0 38.2Z%22/%3E%3Cpath fill=%22%230b6b53%22 d=%22M45 16.8A1.8 1.8 0 0 0 43.2 15L16.8 15A1.8 1.8 0 0 0 15 16.8L15 21.2A1.8 1.8 0 0 0 16.8 23L35.2 23A1.8 1.8 0 0 1 37 24.8L37 45.2A1.8 1.8 0 0 1 35.2 47L16.8 47A1.8 1.8 0 0 0 15 48.8L15 53.2A1.8 1.8 0 0 0 16.8 55L43.2 55A1.8 1.8 0 0 0 45 53.2Z%22/%3E%3C/g%3E%3C/svg%3E%0A">
+<link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 72 72%22 role=%22img%22 aria-label=%22%E5%85%A5%E6%9C%AD%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%22%3E%3Cg transform=%22matrix%28.6222539674 -.7071067812 .6222539674 .7071067812 5 32%29%22%3E%3Cpath fill=%22%23ffffff%22 d=%22M0 1.8A1.8 1.8 0 0 1 1.8 0L28.2 0A1.8 1.8 0 0 1 30 1.8L30 6.2A1.8 1.8 0 0 1 28.2 8L9.8 8A1.8 1.8 0 0 0 8 9.8L8 30.2A1.8 1.8 0 0 0 9.8 32L28.2 32A1.8 1.8 0 0 1 30 33.8L30 38.2A1.8 1.8 0 0 1 28.2 40L1.8 40A1.8 1.8 0 0 1 0 38.2Z%22/%3E%3Cpath fill=%22%23ffffff%22 d=%22M45 16.8A1.8 1.8 0 0 0 43.2 15L16.8 15A1.8 1.8 0 0 0 15 16.8L15 21.2A1.8 1.8 0 0 0 16.8 23L35.2 23A1.8 1.8 0 0 1 37 24.8L37 45.2A1.8 1.8 0 0 1 35.2 47L16.8 47A1.8 1.8 0 0 0 15 48.8L15 53.2A1.8 1.8 0 0 0 16.8 55L43.2 55A1.8 1.8 0 0 0 45 53.2Z%22/%3E%3C/g%3E%3C/svg%3E%0A">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Organization","name":"入札フィット 運営事務局","url":"https://nyusatsu-fit.jp/","email":"info@nyusatsu-fit.jp",
@@ -140,188 +22,566 @@ a,td{overflow-wrap:anywhere}
   "offers":{"@type":"Offer","price":"14800","priceCurrency":"JPY","description":"月額14,800円（税抜）・ベータ提供中"}}
 ]}
 </script>
+<style>
+:root{
+ --primary:#173f5f; --primary-dark:#0f304a; --primary-soft:#e8eff5;
+ --accent:#0b6b53; --accent-soft:#e7f3ef;
+ --ref:#5b6670; --ref-soft:#eef1f4;
+ --text:#1d252d; --muted:#52606d; --line:#d3dce4; --line-strong:#b8c6d1;
+ --bg:#ffffff; --bg-alt:#f4f7f9; --warm:#faf8f2; --warm-line:#8a6d1d; --focus:#d97706;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+ color:var(--text);background:var(--bg);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+a{color:var(--primary)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 16px}
+.skip:focus{left:8px;top:8px;z-index:20}
+.nw{white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+header{border-bottom:1px solid var(--line);background:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.logo{font-size:1.15rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+.logo-svg{flex:none}
+.beta{padding:2px 6px;border-radius:3px;background:var(--primary-soft);color:#31566f;font-size:11px;font-weight:700;letter-spacing:.08em}
+
+/* buttons */
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;
+ border:0;border-radius:8px;font-weight:700;font-size:1.05rem;padding:14px 28px;min-height:52px;cursor:pointer;font-family:inherit;
+ box-shadow:0 2px 0 #08503e}
+.cta:hover{background:#095a46}
+.cta svg{flex:none}
+.cta-s{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px;font-weight:700;font-size:.88rem;padding:8px 14px}
+.cta-sub{display:inline-block;color:var(--primary);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.assure{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:.86rem;color:var(--muted);list-style:none}
+.assure li{display:flex;align-items:center;gap:5px}
+.assure li::before{content:"";width:5px;height:5px;flex:none;border-radius:50%;background:var(--primary)}
+
+/* hero */
+.hero{padding:44px 0 56px;background:linear-gradient(180deg,#f2f6f9 0%,#fff 100%);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);grid-template-areas:"main fig" "foot fig";column-gap:48px;align-items:center}
+.h-main{grid-area:main;align-self:end}.hero figure{grid-area:fig}.h-foot{grid-area:foot;align-self:start}
+.eyebrow{display:inline-block;font-size:.85rem;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:3px 12px;margin-bottom:14px}
+.hero h1{font-size:clamp(1.75rem,3.4vw,2.6rem);line-height:1.4;font-weight:800;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--primary);background:linear-gradient(transparent 68%,#dbe7f1 68%)}
+.hero .sub{margin-top:14px;color:#3a4652;font-size:1.02rem;max-width:32em}
+.hero .actions{margin-top:22px}
+.micro{display:inline-block;font-size:.82rem;font-weight:700;color:var(--primary);background:#fff;border:1px solid var(--line-strong);border-radius:999px;padding:2px 12px;margin-bottom:8px;position:relative}
+.micro::after{content:"";position:absolute;left:24px;bottom:-6px;width:10px;height:10px;background:#fff;border-right:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);transform:rotate(45deg)}
+.price-hint{margin-top:14px;font-size:.88rem;color:var(--muted)}
+.price-hint b{color:var(--text)}
+.limits{margin-top:10px;font-size:.8rem;color:var(--muted);max-width:36em}
+
+/* mail mock */
+.device{position:relative;background:#fff;border:1px solid var(--line-strong);border-radius:8px;box-shadow:0 3px 10px rgba(23,63,95,.06);overflow:hidden}
+.device-bar{display:flex;align-items:center;gap:6px;padding:9px 14px;background:#eef2f5;border-bottom:1px solid var(--line)}
+.device-bar i{width:9px;height:9px;border-radius:50%;background:#cfd8df;display:block}
+.device-bar span{margin-left:8px;font-size:.75rem;color:var(--muted)}
+.inbox-head{padding:12px 16px 10px;border-bottom:1px solid var(--line)}
+.inbox-head .from{display:flex;align-items:center;gap:10px}
+.avatar{width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--line);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.inbox-head .who{font-size:.8rem;color:var(--muted);line-height:1.4}
+.inbox-head .who b{color:var(--text);font-size:.86rem}
+.inbox-head .subj{margin-top:8px;font-weight:700;font-size:.95rem;line-height:1.5}
+.count{display:flex;gap:6px;margin-top:6px}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:.74rem;font-weight:700;border-radius:999px;padding:1px 9px;line-height:1.7}
+.pill.fit{background:var(--accent-soft);color:var(--accent);border:1px solid #b9dccf}
+.pill.ref{background:var(--ref-soft);color:var(--ref);border:1px solid var(--line-strong)}
+.card{margin:12px 14px;border:0;border-bottom:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0;padding:12px 14px;background:#fff;position:relative}
+.card.refc{border-left-color:#9aa6b1}
+.card .title{font-weight:700;font-size:.95rem;line-height:1.5;margin-top:6px}
+.card .org{font-size:.8rem;color:var(--muted);margin-top:2px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:.84rem;border-radius:4px;padding:2px 8px;background:var(--bg-alt);border:1px solid var(--line);color:#33404c}
+.chip.due{background:#fff6e5;border-color:#efd39b;color:#7a4d00;font-weight:700}
+.basis{margin-top:9px;font-size:1rem;background:var(--bg-alt);border-left:3px solid var(--primary);border-radius:0;padding:8px 10px;color:#33404c;line-height:1.6}
+.basis b{color:var(--primary)}
+.basis q{quotes:"「" "」";font-weight:700;color:var(--text)}
+.src{display:inline-block;margin-top:9px;font-size:.85rem;font-weight:700;color:var(--primary)}
+.more{margin:0 14px 12px;font-size:.78rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.more div{display:flex;align-items:center;gap:8px;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:6px 10px;background:#fff}
+.more div span:last-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+details.full{border-top:1px solid var(--line)}
+.device:has(details.full[open]) .more{display:none}
+details.full summary{cursor:pointer;list-style:none;padding:12px 16px;font-weight:700;font-size:.92rem;color:var(--primary);display:flex;align-items:center;gap:8px}
+details.full summary::-webkit-details-marker{display:none}
+details.full summary::before{content:"＋";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--primary-soft);font-size:.8rem}
+details.full[open] summary::before{content:"−"}
+.full-body{padding:0 0 12px}
+.fb-intro{font-size:.8rem;color:var(--muted);padding:0 16px 6px}
+.fb-sec{font-size:.8rem;font-weight:700;color:var(--muted);padding:6px 16px 0}
+.fb-foot{margin:8px 14px 0;padding:10px 12px;border-top:1px dashed var(--line-strong);font-size:.76rem;color:var(--muted);line-height:1.6}
+.mock-cap{font-size:.8rem;color:var(--muted);margin-top:10px;text-align:center}
+
+
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--bg-alt)}
+section.tight{padding-top:48px}
+.sec-head{max-width:44em;margin-bottom:32px}
+.kicker{font-size:.82rem;font-weight:700;color:var(--accent);letter-spacing:.08em}
+h2{font-size:clamp(1.4rem,2.6vw,1.85rem);font-weight:800;line-height:1.45;margin-top:4px}
+.sec-head p{margin-top:10px;color:#3a4652}
+.note{font-size:.8rem;color:var(--muted);margin-top:14px;line-height:1.7}
+
+/* funnel */
+.funnel{display:grid;grid-template-columns:1fr 92px 1fr 92px 1fr;align-items:stretch}
+.stage{border-radius:12px;padding:20px 18px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:4px;background:#fff;border:1px solid var(--line)}
+.stage .ico{margin:0 auto 6px}
+.stage .num{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:800;line-height:1.1;color:var(--primary);font-feature-settings:"palt"}
+.stage .num small{font-size:.9rem;font-weight:700;margin-left:2px}
+.stage .lbl{font-size:.9rem;font-weight:700}
+.stage .desc{font-size:.78rem;color:var(--muted)}
+
+.stage.s3{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(11,107,83,.25)}
+.stage.s3 .num,.stage.s3 .desc{color:#fff}
+.stage.s3 .desc{opacity:.9}
+.arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--muted);font-size:.7rem;text-align:center;line-height:1.35}
+.arrow svg{color:var(--line-strong)}
+.ex-label{display:inline-block;font-size:.85rem;font-weight:700;color:var(--primary);background:var(--primary-soft);border-radius:6px;padding:3px 10px;margin-bottom:14px}
+.funnel-foot{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-top:22px}
+.funnel-foot p{font-weight:700}
+
+/* anatomy */
+.anatomy{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-areas:"fig head" "fig body";column-gap:44px;row-gap:0;align-items:start}
+.a-head{grid-area:head;margin-bottom:22px}.a-fig{grid-area:fig;align-self:center}.a-body{grid-area:body}
+.anatomy .device{transform:none}
+.hl{display:flex;align-items:flex-start;gap:8px;margin-top:10px}
+.mk{width:22px;height:22px;flex:none;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:.75rem;display:grid;place-items:center}
+.mark{position:absolute;width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:.8rem;
+ display:grid;place-items:center;box-shadow:0 0 0 3px #fff;z-index:2}
+.points{list-style:none;display:flex;flex-direction:column;gap:18px}
+.points li{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.points .n{width:30px;height:30px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;display:grid;place-items:center}
+.points b{display:block;font-size:1.02rem}
+.points span{color:#3a4652;font-size:1rem}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.legend div{border-radius:8px;padding:12px 14px;font-size:.88rem;line-height:1.6}
+.legend .lf{background:var(--accent-soft);border:1px solid #b9dccf}
+.legend .lr{background:var(--ref-soft);border:1px solid var(--line-strong)}
+.legend .pill{margin-bottom:4px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:st;list-style:none}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 20px;position:relative}
+.step .badge{position:absolute;top:-13px;left:18px;background:var(--primary);color:#fff;font-weight:800;font-size:.8rem;border-radius:999px;padding:2px 12px}
+.step .ico{margin-bottom:10px}
+.step b{display:block;font-size:1.02rem;margin-bottom:4px}
+.step span:not(.badge){font-size:1rem;color:#3a4652}
+.step:not(:last-child)::after{content:"";position:absolute;right:-16px;top:50%;width:12px;height:12px;border-top:2px solid var(--line-strong);border-right:2px solid var(--line-strong);transform:translateY(-50%) rotate(45deg)}
+
+/* scope */
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{border-radius:12px;padding:18px 20px;border:1px solid var(--line);background:#fff}
+.box h3{font-size:1rem;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.box ul{padding-left:1.2em;font-size:.92rem;color:#33404c}
+.box li+li{margin-top:4px}
+.box.ok h3{color:var(--primary)}
+.box.ng h3{color:var(--primary)}
+.cautions{margin-top:16px;background:var(--warm);border:1px solid #e6dcc0;border-left:4px solid var(--warm-line);border-radius:10px;padding:16px 20px 16px 2.2em;font-size:.95rem}
+.cautions li+li{margin-top:8px}
+.cautions b{margin-right:4px}
+details.more-info{margin-top:18px;border:1px solid var(--line);border-radius:10px;background:#fff}
+details.more-info summary{cursor:pointer;padding:12px 16px;font-weight:700;font-size:.92rem;color:var(--primary)}
+details.more-info div{padding:0 16px 14px;font-size:.88rem;color:#3a4652}
+
+/* pricing */
+.pricing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.price-card{border:2px solid var(--primary);border-radius:14px;background:#fff;padding:28px 28px 24px;box-shadow:0 12px 30px rgba(23,63,95,.10)}
+.price-card .plan{font-weight:700;color:var(--primary)}
+.price{font-size:clamp(2.2rem,6vw,2.9rem);font-weight:800;color:var(--primary);line-height:1.2;margin-top:4px}
+.price small{font-size:1rem;font-weight:700;margin-left:4px}
+.tax{color:var(--muted);font-size:.88rem}
+.incl{list-style:none;margin:18px 0 20px;border-top:1px solid var(--line)}
+.incl li{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.incl li::before{content:"";width:5px;height:5px;flex:none;margin-top:.7em;border-radius:50%;background:var(--primary)}
+.price-card .cta{width:100%}
+.price-card .alt-link{text-align:center;margin-top:12px;font-size:.9rem}
+.fine{font-size:.8rem;color:var(--muted);margin-top:14px;line-height:1.7}
+.pricing-side h2{margin-bottom:12px}
+.pricing-side p{color:#3a4652}
+.pricing-side .cmp{margin-top:18px;font-size:.9rem}
+
+/* form */
+.form-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:start}
+.form-side ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.form-side li{display:flex;gap:10px;font-size:.95rem}
+.form-side li::before{content:"";width:5px;height:5px;flex:none;margin-top:.7em;border-radius:50%;background:var(--primary)}
+.sample-form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 8px 24px rgba(23,63,95,.07)}
+.sample-form label{display:block;margin:0 0 14px;font-weight:700;font-size:.95rem}
+.sample-form input[type=email],.sample-form input[type=text]{display:block;width:100%;margin-top:6px;padding:12px;font-size:16px;border:1px solid var(--line-strong);border-radius:8px;font-weight:400;font-family:inherit}
+.sample-form details.opt{border:1px solid var(--line);border-radius:10px;padding:0 14px;margin:4px 0 16px;background:var(--bg-alt)}
+.sample-form details.opt summary{cursor:pointer;padding:12px 0;font-size:.9rem;font-weight:700;color:var(--primary)}
+.sample-form details.opt[open]{padding-bottom:4px}
+.opt-note{font-size:.85rem;color:var(--muted);margin-bottom:10px}
+.sample-form label.check{font-weight:400;display:flex;gap:10px;align-items:flex-start;line-height:1.6;font-size:.9rem}
+.sample-form label.check input{margin-top:4px;width:20px;height:20px;flex:none}
+.sample-form .req{font-size:.72rem;color:#fff;background:#b91c1c;border-radius:3px;padding:1px 5px;margin-left:8px;vertical-align:1px}
+.sample-form .cta{width:100%}
+.sample-form .cta-note{margin-top:10px;font-size:.85rem;color:var(--muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* faq */
+.faq{max-width:46em}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 36px 16px 0;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:12px;font-size:1.4rem;color:var(--primary);font-weight:400}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 16px;color:#3a4652;font-size:.95rem}
+
+/* closing */
+
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--bg-alt);padding:36px 0 96px;font-size:.85rem;color:var(--muted)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:14px}
+footer nav a{color:var(--muted)}
+footer address{font-style:normal}
+.sources{border-top:1px dashed var(--line-strong);margin-top:16px;padding-top:14px;font-size:.78rem;line-height:1.8}
+a,td{overflow-wrap:anywhere}
+
+/* sticky (mobile) */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.96);border-top:1px solid var(--line);
+ padding:8px 16px calc(8px + env(safe-area-inset-bottom));display:none;transform:translateY(110%);transition:transform .2s}
+.sticky.show{transform:none}
+.sticky .cta{width:100%;min-height:48px;font-size:1rem;padding:10px 16px}
+
+@media (max-width:860px){
+ .hero .more{display:none}
+ .hero{padding:28px 0 40px}
+ .hero .wrap{grid-template-columns:1fr;grid-template-areas:"main" "fig" "foot";row-gap:24px}
+ .h-foot .price-hint{margin-top:0}
+ .pricing,.form-wrap{grid-template-columns:1fr;gap:28px}
+ .anatomy{grid-template-columns:1fr;grid-template-areas:"head" "fig" "body";row-gap:24px}
+ .a-head{margin-bottom:0}
+ .a-body .cta{width:100%}
+ .hero .device{transform:none}
+ .hero .actions .cta{width:100%}
+ section{padding:52px 0}
+ .funnel{grid-template-columns:1fr;gap:0}
+ .arrow{flex-direction:row;padding:8px 0;gap:8px}
+ .arrow svg{transform:rotate(90deg)}
+ .stage{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;text-align:left;gap:12px;padding:14px 16px}
+ .stage .ico{margin:0;width:32px;height:32px}
+ .stage .num{min-width:0;font-size:1.75rem;text-align:right}
+ .steps{grid-template-columns:1fr;gap:22px}
+ .step:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-17px;transform:translateX(-50%) rotate(135deg)}
+ .scope,.legend{grid-template-columns:1fr}
+ .sticky{display:block}
+ .price-card{padding:22px 18px}
+ .cta{padding-inline:12px}
+ .nav .cta-s{display:none}
+}
+@media (min-width:861px){ .stage .txt{display:contents} }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
-
 <header>
-  <div class="wrap nav">
-    <a class="logo" href="/">入札フィット<span class="beta">BETA</span></a>
-    <a class="cta-s" href="#sample">無料サンプル</a>
-  </div>
+ <div class="wrap nav">
+  <a class="logo" href="/" aria-label="入札フィット トップ"><svg class="logo-svg" style="height:28px;width:auto;display:block" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 226.7998 42" aria-hidden="true" focusable="false"><g transform="translate(0 -1.2) scale(.76)"><g transform="matrix(.6222539674 -.7071067812 .6222539674 .7071067812 5 26)"><path fill="#173f5f" d="M0 3A3 3 0 0 1 3 0L27 0A3 3 0 0 1 30 3L30 7A3 3 0 0 1 27 10L13 10A3 3 0 0 0 10 13L10 27A3 3 0 0 0 13 30L27 30A3 3 0 0 1 30 33L30 37A3 3 0 0 1 27 40L3 40A3 3 0 0 1 0 37Z"/><path fill="#0b6b53" d="M45 18A3 3 0 0 0 42 15L18 15A3 3 0 0 0 15 18L15 22A3 3 0 0 0 18 25L32 25A3 3 0 0 1 35 28L35 42A3 3 0 0 1 32 45L18 45A3 3 0 0 0 15 48L15 52A3 3 0 0 0 18 55L42 55A3 3 0 0 0 45 52Z"/></g></g><g fill="#173f5f"><path transform="translate(57.6130 3.5200) scale(1)" d="M29.856 26.536Q30.464 26.984 30.592 27.704Q30.720 28.424 30.304 29.032L29.056 30.728Q28.608 31.368 27.840 31.512Q27.072 31.656 26.432 31.208Q23.552 29.192 21.200 25.960Q18.848 22.728 17.280 18.760Q17.248 18.696 17.168 18.696Q17.088 18.696 17.056 18.760Q15.040 22.632 12.080 25.880Q9.120 29.128 5.600 31.304Q4.928 31.720 4.160 31.544Q3.392 31.368 2.944 30.728L1.696 29.032Q1.280 28.424 1.424 27.720Q1.568 27.016 2.176 26.632Q7.872 22.952 11.008 18.344Q14.144 13.736 14.240 9.096Q14.240 8.840 13.952 8.840L7.744 8.840Q7.008 8.840 6.464 8.296Q5.920 7.752 5.920 7.016L5.920 5.544Q5.920 4.808 6.464 4.264Q7.008 3.720 7.744 3.720L18.496 3.720Q19.232 3.720 19.776 4.264Q20.320 4.808 20.320 5.544L20.320 6.280Q20.320 13.256 22.656 18.136Q24.992 23.016 29.856 26.536Z"/><path transform="translate(89.7734 3.5200) scale(1)" d="M13.056 12.744Q15.040 15.720 16.448 17.896Q16.896 18.568 16.864 19.384Q16.832 20.200 16.352 20.840L15.648 21.800Q15.264 22.312 14.624 22.264Q13.984 22.216 13.664 21.672Q12.704 19.976 11.968 18.792Q11.936 18.760 11.888 18.776Q11.840 18.792 11.840 18.856L11.840 30.376Q11.840 31.112 11.296 31.656Q10.752 32.200 10.016 32.200L8.224 32.200Q7.488 32.200 6.944 31.656Q6.400 31.112 6.400 30.376L6.400 22.056Q6.400 22.024 6.352 22.024Q6.304 22.024 6.272 22.056Q5.408 24.136 4.256 25.896Q3.904 26.440 3.264 26.408Q2.624 26.376 2.272 25.832L1.248 24.168Q0.832 23.464 0.864 22.632Q0.896 21.800 1.376 21.128Q4.448 16.680 5.472 12.776Q5.536 12.520 5.248 12.520L3.264 12.520Q2.528 12.520 1.984 11.976Q1.440 11.432 1.440 10.696L1.440 9.384Q1.440 8.648 1.984 8.104Q2.528 7.560 3.264 7.560L6.144 7.560Q6.400 7.560 6.400 7.272L6.400 4.584Q6.400 3.848 6.944 3.304Q7.488 2.760 8.224 2.760L10.016 2.760Q10.752 2.760 11.296 3.304Q11.840 3.848 11.840 4.584L11.840 7.272Q11.840 7.560 12.128 7.560L14.176 7.560Q14.912 7.560 15.456 8.104Q16.000 8.648 16.000 9.384L16.000 10.696Q16.000 11.432 15.456 11.976Q14.912 12.520 14.176 12.520L13.184 12.520Q13.088 12.520 13.040 12.600Q12.992 12.680 13.056 12.744ZM29.568 19.336Q30.336 19.432 30.832 20.008Q31.328 20.584 31.296 21.352Q31.200 24.264 31.024 26.040Q30.848 27.816 30.592 29.000Q30.336 30.184 29.808 30.744Q29.280 31.304 28.704 31.528Q28.128 31.752 27.040 31.880Q25.792 32.040 24.160 32.040Q23.008 32.040 21.280 31.976Q19.296 31.880 18.448 31.480Q17.600 31.080 17.280 30.040Q16.960 29.000 16.960 26.600L16.960 5.064Q16.960 4.328 17.504 3.784Q18.048 3.240 18.784 3.240L21.056 3.240Q21.792 3.240 22.336 3.784Q22.880 4.328 22.880 5.064L22.880 25.960Q22.880 26.568 22.944 26.696Q23.008 26.824 23.360 26.856Q23.936 26.920 24.320 26.920Q24.640 26.920 25.280 26.856Q25.664 26.824 25.792 26.440Q25.984 25.768 26.048 20.744Q26.080 20.008 26.624 19.528Q27.168 19.048 27.872 19.144Z"/><path transform="translate(120.7514 3.5200) scale(1)" d="M26.976 5.640Q27.744 5.640 28.288 6.168Q28.832 6.696 28.800 7.464Q28.608 18.216 23.744 23.720Q18.880 29.224 8.864 30.408Q8.096 30.504 7.456 30.040Q6.816 29.576 6.688 28.808L6.272 26.792Q6.144 26.088 6.560 25.496Q6.976 24.904 7.712 24.808Q14.528 23.976 17.920 20.936Q21.312 17.896 22.112 11.656Q22.144 11.560 22.048 11.480Q21.952 11.400 21.856 11.400L5.344 11.400Q4.608 11.400 4.064 10.856Q3.520 10.312 3.520 9.576L3.520 7.464Q3.520 6.728 4.064 6.184Q4.608 5.640 5.344 5.640Z"/><path transform="translate(146.4508 1.5880) scale(1.06)" d="M25.312 11.112L26.016 12.008Q26.496 12.616 26.432 13.384Q26.368 14.152 25.760 14.632Q23.488 16.488 20.352 18.248Q20.128 18.376 20.128 18.664L20.128 28.840Q20.128 29.576 19.584 30.120Q19.040 30.664 18.304 30.664L16.384 30.664Q15.648 30.664 15.104 30.120Q14.560 29.576 14.560 28.840L14.560 21.192Q14.560 20.968 14.304 21.032Q10.976 22.280 7.680 22.888Q6.944 23.016 6.336 22.568Q5.728 22.120 5.600 21.384L5.408 20.168Q5.280 19.432 5.728 18.840Q6.176 18.248 6.912 18.088Q11.296 17.256 15.440 15.368Q19.584 13.480 22.848 10.856Q23.424 10.408 24.144 10.472Q24.864 10.536 25.312 11.112Z"/><path transform="translate(171.2799 1.5880) scale(1.06)" d="M24.928 10.344Q25.696 10.408 26.224 10.952Q26.752 11.496 26.720 12.264Q26.432 21.128 22.944 25.224Q19.456 29.320 11.648 30.344Q10.880 30.440 10.256 29.992Q9.632 29.544 9.472 28.776L9.216 27.496Q9.088 26.792 9.488 26.216Q9.888 25.640 10.624 25.512Q16.512 24.616 18.912 21.688Q21.312 18.760 21.536 12.008Q21.568 11.272 22.112 10.760Q22.656 10.248 23.392 10.280ZM11.488 17.480Q11.680 18.216 11.280 18.872Q10.880 19.528 10.176 19.688L8.800 20.008Q8.064 20.168 7.424 19.768Q6.784 19.368 6.624 18.664Q5.792 15.272 5.344 13.608Q5.152 12.872 5.536 12.216Q5.920 11.560 6.624 11.400L7.872 11.112Q8.608 10.920 9.248 11.320Q9.888 11.720 10.112 12.456Q10.976 15.528 11.488 17.480ZM14.784 10.344Q15.520 10.184 16.176 10.568Q16.832 10.952 17.024 11.656Q18.048 15.496 18.400 16.840Q18.592 17.576 18.192 18.232Q17.792 18.888 17.088 19.048L15.712 19.368Q14.976 19.528 14.336 19.144Q13.696 18.760 13.504 18.056Q13.440 17.864 12.128 12.840Q11.936 12.104 12.320 11.464Q12.704 10.824 13.408 10.664Z"/><path transform="translate(196.0051 3.5200) scale(1)" d="M28.064 17.192Q28.768 17.416 29.104 18.104Q29.440 18.792 29.184 19.528L28.416 21.832Q28.192 22.536 27.520 22.872Q26.848 23.208 26.112 22.952Q19.680 20.712 13.024 18.984Q12.928 18.952 12.864 19.032Q12.800 19.112 12.800 19.208L12.800 29.096Q12.800 29.832 12.256 30.376Q11.712 30.920 10.976 30.920L8.224 30.920Q7.488 30.920 6.944 30.376Q6.400 29.832 6.400 29.096L6.400 5.864Q6.400 5.128 6.944 4.584Q7.488 4.040 8.224 4.040L10.976 4.040Q11.712 4.040 12.256 4.584Q12.800 5.128 12.800 5.864L12.800 12.392Q12.800 12.680 13.056 12.744Q21.024 14.728 28.064 17.192Z"/></g></svg>
+<span class="beta">BETA</span></a>
+  <a class="cta-s" href="#sample">無料で配信例を受け取る</a>
+ </div>
 </header>
 
 <main id="main">
-
-<div class="hero">
-  <div class="wrap">
-    <div>
-      <p class="eyebrow">中小SIer・IT事業者の公共営業向け</p>
-      <h1>官公庁のIT入札、<br>読むべき案件だけを毎朝。</h1>
-      <p class="sub">入札フィットは、官公庁・自治体のIT・システム案件の入札公告を貴社の<strong>資格等級・地域・実績要件</strong>で照合し、「適合」「参考」に分けて<strong>根拠付き</strong>で毎営業日の朝に届ける情報サービスです。AIを含む自動処理で候補を提示するものであり、最終的な応札可否は各案件に付く原典リンクからご確認ください。</p>
-      <p style="margin-top:26px"><a class="cta" href="#sample">無料サンプルを申し込む</a></p>
-      <p class="cta-note">メールアドレスだけでOK（直近5営業日の配信例をお送りします）。会社名・法人番号を書き添えていただければ、貴社条件で選別した自社向け版を作成します。<strong>1営業日以内に送付・営業電話はしません。</strong></p>
-    </div>
-    <div class="mail" role="img" aria-label="配信メールの見本">
-      <div class="mail-head">
-        <div class="subj">【入札フィット】8/18(火) 新着 適合2件・参考1件</div>
-        <div class="from">入札フィット日次配信 &lt;alerts@…&gt;</div>
-      </div>
-      <div class="mail-item">
-        <span class="tag fit">適合</span><span class="t">臨床研究支援業務管理システム構築業務 一式</span>
-        <div class="m">国立がん研究センター｜入札書提出期限 <strong>9/7(月)</strong><br>
-        根拠: 等級A〜D可（「A,B,C又はDの等級に格付け」）・常駐要件なし｜<a href="#">原典（公告PDF）</a></div>
-      </div>
-      <div class="mail-item">
-        <span class="tag fit">適合</span><span class="t">釧路地方裁判所及び標津簡易裁判所庁舎LAN配線敷設等業務</span>
-        <div class="m">最高裁判所｜入札書提出期限 <strong>9/3(木)</strong><br>
-        根拠: 等級C/D可・常駐要件なし｜<a href="#">原典（調達ポータル）</a></div>
-      </div>
-      <div class="mail-item">
-        <span class="tag ref">参考</span><span class="t">【磐城国道事務所】ホームページ運用等業務委託</span>
-        <div class="m">国土交通省｜等級C適合・<strong>提出期限は本文に記載なし</strong>→原典でご確認ください｜<a href="#">原典</a></div>
-      </div>
-      <div class="mail-cap">実際の配信メール（2026年8月18日配信分）からの抜粋。案件はすべて実在の公告です。</div>
-    </div>
+<!-- ① Hero -->
+<section class="hero" aria-labelledby="h-hero">
+ <div class="wrap">
+  <div class="h-main">
+   <p class="eyebrow">中小SIer・IT事業者の公共営業に</p>
+   <h1 id="h-hero">自社条件に合う<br><em>IT入札候補</em>を、<br>毎朝メールで。</h1>
+   <p class="sub">官公庁・自治体の入札公告を資格等級・地域・実績要件で照合し、根拠と原典リンク付きの候補を毎営業日の朝に届けます。</p>
+   <div class="actions">
+    <p class="micro">入力はメールアドレスのみ・カード登録不要</p>
+    <a class="cta" href="#sample" data-cta="hero">
+     <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 5.5l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+     無料で配信例を受け取る</a>
+    <ul class="assure"><li>直近5営業日分</li><li>1営業日以内に送付</li><li>営業電話なし</li></ul>
+   </div>
   </div>
-</div>
 
-<section>
-  <div class="wrap">
-    <h2>その2〜3件のために、毎日460件に目を通しますか？</h2>
-    <div class="numbers">
-      <div class="num"><div class="v">約460件</div><div class="l">1日の入札公告</div></div>
-      <div class="num"><div class="v">16件</div><div class="l">うちIT・システム関連</div></div>
-      <div class="num"><div class="v hit">2〜3件</div><div class="l">応札要件が合う案件</div></div>
+  <figure>
+   <div class="device" role="group" aria-label="配信メールの見本">
+    
+    <div class="inbox-head">
+     <div class="from"><span class="avatar" aria-hidden="true"><svg class="av-svg" style="height:22px;width:auto;display:block" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 72 60" aria-hidden="true" focusable="false" aria-label="入札フィット シンボル"><g transform="matrix(.6222539674 -.7071067812 .6222539674 .7071067812 5 26)"><path fill="#173f5f" d="M0 3A3 3 0 0 1 3 0L27 0A3 3 0 0 1 30 3L30 7A3 3 0 0 1 27 10L13 10A3 3 0 0 0 10 13L10 27A3 3 0 0 0 13 30L27 30A3 3 0 0 1 30 33L30 37A3 3 0 0 1 27 40L3 40A3 3 0 0 1 0 37Z"/><path fill="#0b6b53" d="M45 18A3 3 0 0 0 42 15L18 15A3 3 0 0 0 15 18L15 22A3 3 0 0 0 18 25L32 25A3 3 0 0 1 35 28L35 42A3 3 0 0 1 32 45L18 45A3 3 0 0 0 15 48L15 52A3 3 0 0 0 18 55L42 55A3 3 0 0 0 45 52Z"/></g></svg>
+</span>
+      <div class="who"><b>入札フィット日次配信</b><br>毎営業日 朝</div></div>
+     <p class="subj">【入札フィット】<span class="nw">8/18(火)</span> <span class="nw">新着</span> <span class="nw">適合2件・</span><span class="nw">参考1件</span></p>
     </div>
-    <p class="lead">キーワード検索では、資格等級が合わない案件・常駐で通えない案件・実績要件を満たせない案件が大量に混ざります。絞り込むのは、結局いつも人の目です。</p>
-    <p class="note">数値は2026年8月17日〜21日の5営業日、官公需情報ポータルサイトAPIで取得した公告2,295件を全文分類した実測値。「応札要件が合う案件」はモデル企業条件（全省庁統一資格C/D級・関東圏・Web系システム開発）での選別例で、貴社の資格・地域により件数は変わります。</p>
+    <div class="card">
+     <span class="pill fit">適合</span>
+     <p class="title">臨床研究支援業務管理システム構築業務 一式</p>
+     <p class="org">国立がん研究センター</p>
+     <div class="meta"><span class="chip due">入札書提出期限 9/7(月)</span><span class="chip">等級A〜D可</span><span class="chip">常駐要件なし</span></div>
+     <p class="basis"><b>根拠</b> 公告より <q>A,B,C又はDの等級に格付け</q></p>
+     <span class="src">原典リンク（公告PDF・表示見本）</span>
+    </div>
+    <div class="more">
+     <div><span class="pill fit">適合</span><span>釧路地方裁判所ほか庁舎LAN配線敷設等業務</span></div>
+     <div><span class="pill ref">参考</span><span>【磐城国道事務所】ホームページ運用等業務委託</span></div>
+    </div>
+    <details class="full">
+     <summary>配信例を詳しく見る（全文の見本）</summary>
+     <div class="full-body">
+      <p class="fb-intro">8/18(火)の配信を、見やすく再構成した見本です。実際のメールでは各案件に公告への直接リンクが付きます。</p>
+      <div class="fb-sec">適合 2件</div>
+      <div class="card"><span class="pill fit">適合</span>
+       <p class="title">臨床研究支援業務管理システム構築業務 一式</p><p class="org">国立がん研究センター</p>
+       <div class="meta"><span class="chip due">入札書提出期限 9/7(月)</span></div>
+       <p class="basis"><b>根拠</b> 等級A〜D可（<q>A,B,C又はDの等級に格付け</q>）・常駐要件なし</p>
+       <span class="src">原典リンク（公告PDF・表示見本）</span></div>
+      <div class="card"><span class="pill fit">適合</span>
+       <p class="title">釧路地方裁判所及び標津簡易裁判所庁舎LAN配線敷設等業務</p><p class="org">最高裁判所</p>
+       <div class="meta"><span class="chip due">入札書提出期限 9/3(木)</span></div>
+       <p class="basis"><b>根拠</b> 等級C/D可・常駐要件なし</p>
+       <span class="src">原典リンク（調達ポータル・表示見本）</span></div>
+      <div class="fb-sec">参考 1件</div>
+      <div class="card refc"><span class="pill ref">参考</span>
+       <p class="title">【磐城国道事務所】ホームページ運用等業務委託</p><p class="org">国土交通省</p>
+       <p class="basis">等級C適合・<b style="color:#7a4d00">提出期限は本文に記載なし</b> → 原典でご確認ください</p>
+       <span class="src">原典リンク（表示見本）</span></div>
+      <div class="fb-foot">
+       <p>判定プロファイル: 全省庁統一資格 C等級・関東・甲信越・情報処理／ソフトウェア開発（見本用の条件）</p>
+       <p>出典: 官公需情報ポータルサイトのAPIを利用。各案件の原典は公告へのリンクから。</p>
+       <p>AIを含む自動処理で選別しています。応札の可否は必ず原典でご確認ください。</p>
+       <p>配信停止のリンク・特定商取引法に基づく表示</p>
+      </div>
+     </div>
+    </details>
+   </div>
+   <figcaption class="mock-cap">実際の配信メール（2026年8月18日配信分）から抜粋・再構成。案件はすべて実在の公告です。</figcaption>
+  </figure>
+  <div class="h-foot">
+   <p class="price-hint">本契約は <b>月額14,800円</b>（税抜）・いつでも解約・日割返金</p>
+   <p class="limits">※ AIを含む自動判定のため誤りがあり、収集範囲も限られます。応札の可否は必ず原典でご確認ください。</p>
   </div>
+ </div>
 </section>
 
-<section class="alt">
-  <div class="wrap">
-    <h2>入札フィットがすること</h2>
-    <div class="features">
-      <div class="feat">
-        <h3>検索ではなく、貴社条件での適合候補の提示</h3>
-        <p>資格等級・地域/常駐・実績要件（ISMS/Pマーク・同種実績）・契約形態・締切の軸で1件ずつ照合し、「適合」「参考」に分けて候補を配信。根拠は公告の原文つきで併記します。応札可否の判断は貴社が原典を確認のうえ行ってください。</p>
-      </div>
-      <div class="feat">
-        <h3>設定不要。法人番号だけ</h3>
-        <p>お申込み時の法人番号から、公的な資格者名簿にある貴社の全省庁統一資格の等級・営業品目・競争参加地域を照合し、配信プロファイルを自動生成。検索条件の設計は不要です。</p>
-      </div>
-      <div class="feat">
-        <h3>すべての案件に原典リンク</h3>
-        <p>配信する全案件に発注機関の公告（原典）への直リンクを付けます。応札の最終判断は、必ず一次情報で確認できます。</p>
-      </div>
+<!-- ② Funnel -->
+<section class="tight" aria-labelledby="h-funnel">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="kicker">しくみ</p>
+   <h2 id="h-funnel">資格等級・地域・実績要件で、<br>確認する候補を絞る。</h2>
+   <p>公告を探すだけでなく、その先の参加条件を貴社の登録条件と照合します。</p>
+  </div>
+  <p class="ex-label">モデル企業条件での実測例（1日あたり）</p>
+  <div class="funnel" role="list">
+   <div class="stage s1" role="listitem">
+    <svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H34V29M10 7H30V33"/><g fill="currentColor"><rect x="5" y="11" width="21" height="26" rx="2"/></g><g stroke="#ffffff"><path d="M10 20H21M10 27H18"/></g></g></svg>
+    <div class="txt"><p class="lbl">取得した公告</p><p class="desc">国・独法・自治体</p></div>
+    <p class="num">約460<small>件/日</small></p>
+   </div>
+   <div class="arrow" aria-hidden="true"><svg width="36" height="20" viewBox="0 0 36 20"><path d="M2 10h28M24 4l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>分野で<br>分類</div>
+   <div class="stage" role="listitem">
+    <svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 11H7a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h18"/><g fill="currentColor"><path d="M17 3H27L35 11V27a2 2 0 0 1-2 2H17a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/></g><g stroke="#ffffff"><path d="M27 5V11H33M23 15L20 18L23 21M27 15L30 18L27 21M20 25H27"/></g></g></svg>
+    <div class="txt"><p class="lbl">IT・システム関連</p><p class="desc">開発・保守・運用など</p></div>
+    <p class="num">16<small>件/日</small></p>
+   </div>
+   <div class="arrow" aria-hidden="true"><svg width="36" height="20" viewBox="0 0 36 20"><path d="M2 10h28M24 4l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>等級・地域・<br>実績要件で照合</div>
+   <div class="stage s3" role="listitem">
+    <svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" color="#ffffff"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5H13L18 10V33a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path fill="currentColor" d="M24 5H33L38 10V33a2 2 0 0 1-2 2H24a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M13 6V11H17M7 18H12M7 26H22"/><g stroke="#0b6b53"><path d="M33 6V11H37M27 18H32M22 26H32"/></g></g></svg>
+    <div class="txt"><p class="lbl">条件に合う候補</p><p class="desc"><span class="nw">C/D級・</span><span class="nw">関東圏・</span><span class="nw">Web系の例</span></p></div>
+    <p class="num">2〜3<small>件/日</small></p>
+   </div>
+  </div>
+  <p class="note">2026年8月17日〜21日の5営業日に官公需情報ポータルサイトAPIで取得した公告2,295件を全文分類した実測例です。「条件に合う候補」はモデル企業条件（全省庁統一資格C/D級・関東圏・Web系システム開発）での件数で、貴社の資格・地域により変わります。配信件数を保証するものではありません。</p>
+ </div>
+</section>
+
+<!-- ③ Anatomy -->
+<section class="alt" aria-labelledby="h-anatomy">
+ <div class="wrap anatomy">
+  <div class="sec-head a-head">
+   <p class="kicker">メールの読み方</p>
+   <h2 id="h-anatomy">この案件、<br>自社の条件に合う？</h2>
+   <p>答えは、公告の原文で。候補だけでなく、選んだ根拠まで届けます。</p>
+  </div>
+  <figure class="a-fig">
+   <div class="device" role="group" aria-label="配信メールの1件（見どころ番号付き）">
+    <div class="card" style="margin:16px">
+     <span class="pill fit">適合</span>
+     <p class="title">臨床研究支援業務管理システム構築業務 一式</p>
+     <p class="org">国立がん研究センター</p>
+     <div class="hl"><span class="mk" aria-hidden="true">1</span><p class="basis" style="margin:0"><b>根拠</b> 公告より <q>A,B,C又はDの等級に格付け</q>・常駐要件なし</p></div>
+     <div class="hl"><span class="mk" aria-hidden="true">2</span><div class="meta" style="margin:0"><span class="chip due">入札書提出期限 9/7(月)</span></div></div>
+     <div class="hl"><span class="mk" aria-hidden="true">3</span><span class="src" style="margin:0">原典リンク（公告PDF・表示見本）</span></div>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>ご利用開始まで</h2>
-    <ol class="steps">
-      <li><b>お申込み</b><span>法人番号とメールアドレスをご登録いただきます。</span></li>
-      <li><b>プロファイル自動生成</b><span>公的名簿から貴社の資格等級・営業品目・地域を照合します。修正のご要望はメールで承り、翌配信分から反映します。</span></li>
-      <li><b>翌営業日の朝から配信</b><span>毎営業日の朝、新着の適合候補をメールでお届けします。</span></li>
-    </ol>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="honest">
-      <h2 id="scope">対象範囲と制約</h2>
-      <ul>
-        <li><strong>AIを含む自動処理で候補を提示します。</strong>入札フィットは、AIを含む自動処理で公告を分類・抽出し、貴社の登録条件に合致する候補を提示します。応札可否の判断は貴社が原典を確認のうえ行ってください。判定・抽出には誤りが含まれることがあります。</li>
-        <li><strong>網羅性は保証しません。</strong>情報源は公的機関の公式・公開データに限定しており、一部の機関（ID/パスワード制の調達サイト等）は構造的に対象外です。全件網羅が必要な場合は網羅型サービスをご検討ください。</li>
-        <li><strong>配信は公表の翌営業日以降になります</strong>（公的集約データベースの更新周期によるものです）。</li>
-        <li>公告本文から要件を確定できない案件は「参考」として区別して配信します。適合と偽って混ぜることはしません。</li>
-        <li>対象は国・独立行政法人・地方公共団体のIT・システム関連の役務案件です。物品購入のみの案件・建設工事は対象外です。</li>
-        <li><strong>配信精度の評価セットは2021〜2026年度の落札実績に基づきます。</strong>情報処理・ソフトウェア開発の資格で公的機関の案件を落札した事業者の実績から作った評価データで精度を測っており、その範囲に現れない案件や事業者での精度は未測定です。</li>
-      </ul>
+    <div class="card refc" style="margin:0 16px 16px">
+     <span class="pill ref">参考</span>
+     <p class="title">【磐城国道事務所】ホームページ運用等業務委託</p>
+     <p class="org">国土交通省</p>
+     <p class="basis">等級C適合・<b style="color:#7a4d00">提出期限は本文に記載なし</b> → 原典でご確認ください</p>
     </div>
+   </div>
+   <figcaption class="mock-cap">実配信（2026年8月18日）の案件情報を、説明用に再構成しています。照合条件は、末尾の判定プロファイル（見本用）のとおりです。</figcaption>
+  </figure>
+  <div class="a-body">
+   <ol class="points">
+    <li><span class="n" aria-hidden="true">1</span><div><b>根拠を原文で確認</b><span>判定に使った公告の原文を引用して表示します。</span></div></li>
+    <li><span class="n" aria-hidden="true">2</span><div><b>提出期限を確認</b><span>公告から確認できた提出期限を表示します。本文に記載がない場合は、原典でご確認ください。</span></div></li>
+    <li><span class="n" aria-hidden="true">3</span><div><b>原典で最終確認</b><span>実際のメールでは発注機関の公告へ直接リンクします。応札の判断は必ず一次情報で。</span></div></li>
+   </ol>
+   <div class="legend">
+    <div class="lf"><span class="pill fit">適合</span><br>登録条件と照合して、合致すると判定した候補。</div>
+    <div class="lr"><span class="pill ref">参考</span><br>公告本文だけでは要件を確定できない候補。原典でご確認ください。</div>
+   </div>
+   <p class="note">「適合」は応札できることの保証ではありません。</p>
+   <p style="margin-top:20px"><a class="cta" href="#sample" data-cta="anatomy">無料で配信例を受け取る</a></p>
   </div>
+ </div>
 </section>
 
-<section id="pricing">
-  <div class="wrap">
-    <h2>料金</h2>
-    <div class="price-card">
-      <div class="price-row">
-        <span class="price">月額 14,800円</span><span class="tax">税抜（税込 16,280円）</span>
-      </div>
-      <table>
-        <tr><th>含まれるもの</th><td>毎営業日の朝の適合候補の配信、配信プロファイルの自動生成と修正対応</td></tr>
-        <tr><th>契約単位</th><td>1ヶ月・自動更新。最低利用期間なし</td></tr>
-        <tr><th>解約・返金</th><td>カスタマーポータルからいつでも即時解約。未経過分は日割で自動返金（<a href="refund.html">返金ポリシー</a>）</td></tr>
-        <tr><th>支払方法</th><td>クレジットカード（Stripe）。領収書データを毎月自動発行</td></tr>
-        <tr><th>ベータ特典</th><td>ベータ期間中の値上げは既存契約に適用しません</td></tr>
-      </table>
-      <a class="cta" href="https://buy.stripe.com/00w3cv9z1eBeclrb8y2B200" rel="noopener">ベータで申し込む（月額 14,800円・税抜）</a>
-      <p class="cta-note">ベータ提供中。お支払いは Stripe（クレジットカード）。<strong>月途中の解約は未経過分を日割で返金</strong>します（<a href="refund.html">返金ポリシー</a>）。決済完了後、翌営業日の朝から配信を開始します。</p>
-      <p class="cta-note">サービスの型や価格帯の見方は、<a href="guide/erabikata">入札情報サービスの選び方</a>にまとめています。</p>
-      <p class="cta-note">まずは<a href="#sample">無料サンプル</a>で配信内容をお確かめください。申込前のご相談は <a href="mailto:info@nyusatsu-fit.jp?subject=%E5%85%A5%E6%9C%AD%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E7%94%B3%E8%BE%BC%E5%B8%8C%E6%9C%9B">info@nyusatsu-fit.jp</a> へ。</p>
-    </div>
+<!-- ④ Steps -->
+<section aria-labelledby="h-steps">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="kicker">有料プランのご利用開始まで</p>
+   <h2 id="h-steps">検索条件の設計は不要。<br>法人番号から配信を始めます。</h2>
   </div>
+  <ol class="steps">
+   <li class="step"><span class="badge">STEP 1</span>
+    <svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="36" height="13" rx="2" fill="currentColor"/><path stroke="#fff" stroke-width="1.3" d="M8 9V14 M10.3 9V14 M12.6 9V14 M14.9 9V14 M17.2 9V14 M19.5 9V14 M21.8 9V14 M24.1 9V14 M26.4 9V14 M28.7 9V14 M31 9V14 M33.3 9V14 M35.6 9V14"/><rect x="4" y="25" width="36" height="14" rx="2"/><g stroke-width="1.8"><path d="M14.5 30V34Q14.5 36 17 34Q19 31 16 28.5Q12 26 8.5 29Q5.5 33 9 36Q11 37.5 14 36.5"/><ellipse cx="12" cy="32" rx="2.5" ry="2.5"/></g><path d="M23 32H28M33 29V35" stroke-width="2"/></g></svg>
+    <b>有料申込・情報登録</b><span>法人番号とメールアドレスをご登録いただきます。</span></li>
+   <li class="step"><span class="badge">STEP 2</span>
+    <svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="36" height="34" rx="2"/><path d="M4 15H40M4 27H40M16 5V39M28 5V39" stroke-width="2"/><path fill="currentColor" stroke="none" d="M5 15H39V27H5Z"/><path stroke="#fff" stroke-width="2" d="M16 16V26M28 16V26M8 21H12M20 21H24M32 21H36"/></g></svg>
+    <b>配信条件をつくる</b><span>公的な資格者名簿から等級・営業品目・地域を照合。修正はメールで承り、翌配信分から反映します。</span></li>
+   <li class="step"><span class="badge">STEP 3</span>
+    <svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="5" width="26" height="25" rx="2"/><path fill="currentColor" d="M10 6H34V11H10Z"/><path d="M16 3V8M28 3V8"/><path d="M15 15L17 14V20M23 14H28L25 20" stroke-width="2"/><path fill="currentColor" d="M6 23H38a1 1 0 0 1 1 1V38a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V24a1 1 0 0 1 1-1Z"/><path stroke="#fff" d="M7 25L22 34L37 25"/></g></svg>
+    <b>翌営業日の朝から配信</b><span>毎営業日の朝、新着の候補がメールで届きます。</span></li>
+  </ol>
+ </div>
 </section>
 
-<section id="sample">
-  <div class="wrap">
-    <h2>無料サンプルを申し込む</h2>
-    <form class="sample-form" method="post" action="https://api.nyusatsu-fit.jp/signup" accept-charset="UTF-8">
-      <input type="hidden" name="consent_version" value="consent-v1-2026-09-03">
-      <div class="hp" aria-hidden="true"><label>このフィールドは空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-      <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.co.jp"></label>
-      <label>会社名（任意）<input type="text" name="company_name" autocomplete="organization"></label>
-      <label>法人番号（任意・13桁）<input type="text" name="corporate_number" inputmode="numeric" pattern="[0-9]{13}" title="13桁の数字"></label>
-      <label class="check"><input type="checkbox" name="consent" value="on" required><span>入札フィットからの無料サンプルと案内メールの受信に同意します。配信はいつでも停止できます（<a href="privacy.html">プライバシーポリシー</a>）。</span></label>
-      <button type="submit" class="cta">無料サンプルを申し込む</button>
-      <p class="cta-note">直近5営業日の配信例を<strong>1営業日以内</strong>にお送りします。会社名・法人番号をご記入いただければ、貴社条件で選別した自社向け版を作成します。営業電話はしません。フォームが使えない場合は<a href="mailto:info@nyusatsu-fit.jp?subject=%E7%84%A1%E6%96%99%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%B8%8C%E6%9C%9B">メール</a>でも受け付けます。</p>
-    </form>
+<!-- ⑤ Scope -->
+<section class="alt" id="scope" aria-labelledby="h-scope">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="kicker">対象範囲</p>
+   <h2 id="h-scope">対象と、ご確認いただきたいこと。</h2>
   </div>
+  <div class="scope">
+   <div class="box ok"><h3><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="5.5"/></g></svg>対象</h3>
+    <ul><li>国・独立行政法人・地方公共団体の公告</li><li>IT・システム関連の役務（開発・保守・運用・データ業務など）</li></ul></div>
+   <div class="box ng"><h3><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" color="#173f5f"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10H15"/></g></svg>対象外</h3>
+    <ul><li>物品購入のみの案件・建設工事</li><li>ID／パスワード制の調達サイトにのみ掲載される案件</li></ul></div>
+  </div>
+  <ul class="cautions">
+   <li><b>判定には誤りがあります。</b>AIを含む自動処理で分類・抽出しています。応札可否は原典を確認のうえご判断ください。</li>
+   <li><b>網羅は保証しません。</b>公的機関の公式・公開データが情報源です。全件網羅が必要な場合は網羅型サービスをご検討ください。</li>
+   <li><b>配信は公表の翌営業日以降です。</b>公的な集約データベースの更新周期によるものです。</li>
+  </ul>
+  <details class="more-info">
+   <summary>判定精度の評価方法</summary>
+   <div>配信精度の評価セットは2021〜2026年度の落札実績に基づきます。情報処理・ソフトウェア開発の資格で公的機関の案件を落札した事業者の実績から作った評価データで精度を測っており、その範囲に現れない案件や事業者での精度は未測定です。</div>
+  </details>
+ </div>
 </section>
 
-<section class="alt">
-  <div class="wrap">
-    <h2>よくある質問</h2>
-    <dl class="faq">
-      <dt>Q. 対象の案件範囲は？</dt>
-      <dd>A. 国・独立行政法人・地方公共団体が公表するIT・システム関連の役務案件（開発・保守・運用・データ業務等）です。物品購入のみの案件・建設工事は対象外です。</dd>
-      <dt>Q. 全省庁統一資格を持っていなくても使えますか？</dt>
-      <dd>A. 使えます。等級を問わない案件や地方自治体の案件も配信対象です。</dd>
-      <dt>Q. どうやって「適合」と判定していますか？</dt>
-      <dd>A. 公告本文から資格等級・地域/常駐条件・実績要件・契約形態・締切を抽出し、貴社のプロファイルと突き合わせています。判定根拠は配信メールに原文つきで併記します。</dd>
-      <dt>Q. 判定が間違っていたら？</dt>
-      <dd>A. メールでご連絡ください。事実を確認のうえプロファイルや判定を修正し、誤配信については当該月の料金を上限に個別に返金対応します（<a href="refund.html">返金ポリシー</a>）。</dd>
-      <dt>Q. 解約したら日割で返ってきますか？</dt>
-      <dd>A. はい。解約は即時に有効となり、当月の未経過分は自動で日割返金されます。</dd>
-      <dt>Q. 請求書・領収書は発行されますか？</dt>
-      <dd>A. 決済ごとに領収書データが自動発行されます（インボイス対応の要否はお問い合わせください）。</dd>
-    </dl>
+<!-- ⑥ Pricing -->
+<section id="pricing" aria-labelledby="h-pricing">
+ <div class="wrap pricing">
+  <div class="pricing-side">
+   <p class="kicker">料金</p>
+   <h2 id="h-pricing">月額14,800円（税抜）。<br>いつでも解約できます。</h2>
+   <p>最低利用期間はありません。解約はカスタマーポータルからいつでも即時に行え、当月の未経過分は日割で自動返金します。</p>
   </div>
+  <div class="price-card">
+   <p class="plan">入札フィット（ベータ）</p>
+   <p class="price">14,800<small>円/月</small></p>
+   <p class="tax">税抜（税込 16,280円）</p>
+   <ul class="incl">
+    <li><span>毎営業日の朝、新着の候補をメール配信</span></li>
+    <li><span>配信条件の作成と修正対応</span></li>
+    <li><span>1ヶ月単位・自動更新・最低利用期間なし</span></li>
+    <li><span>カスタマーポータルから即時解約・未経過分は日割で自動返金（<a href="refund.html">返金ポリシー</a>）</span></li>
+   </ul>
+   <a class="cta" href="#sample" data-cta="pricing">無料で配信例を受け取る</a>
+   <p class="alt-link"><a class="cta-sub" href="https://buy.stripe.com/00w3cv9z1eBeclrb8y2B200">ベータで申し込む（月額14,800円・税抜）</a></p>
+   <p class="fine">お支払いはクレジットカード（Stripe）。領収書データは毎月自動発行。決済完了後、翌営業日の朝から配信を開始します。ベータ期間中の値上げは既存契約に適用しません。</p>
+  </div>
+ </div>
+</section>
+
+<!-- ⑧ FAQ -->
+<section class="alt" aria-labelledby="h-faq">
+ <div class="wrap">
+  <div class="sec-head"><p class="kicker">FAQ</p><h2 id="h-faq">よくある質問</h2></div>
+  <div class="faq">
+   <details><summary>全省庁統一資格を持っていなくても使えますか？</summary><p>使えます。等級を問わない案件や地方自治体の案件も配信対象です。</p></details>
+   <details><summary>どうやって「適合」と判定していますか？</summary><p>公告本文から資格等級・地域/常駐条件・実績要件・契約形態・締切を抽出し、貴社の配信条件と突き合わせています。判定の根拠は配信メールに原文つきで併記します。</p></details>
+   <details><summary>判定が間違っていたら？</summary><p>メールでご連絡ください。事実を確認のうえ配信条件や判定を修正し、誤配信については当該月の料金を上限に個別に返金対応します（<a href="refund.html">返金ポリシー</a>）。</p></details>
+   <details><summary>請求書・領収書は発行されますか？</summary><p>決済ごとに領収書データが自動発行されます（インボイス対応の要否はお問い合わせください）。</p></details>
+   <details><summary>自社向けのサンプルはどう作りますか？</summary><p>フォームで会社名・法人番号をお知らせいただくと、公的な資格者名簿の情報をもとに貴社条件で選別した版をお送りします。</p></details>
+  </div>
+ </div>
+</section>
+
+<!-- ⑦ Form -->
+<section id="sample" aria-labelledby="h-sample">
+ <div class="wrap form-wrap">
+  <div class="form-side">
+   <p class="kicker">無料サンプル</p>
+   <h2 id="h-sample">直近5営業日分の配信例を、<br>1営業日以内にお送りします。</h2>
+   <ul>
+    <li>メールアドレスだけで申し込めます</li>
+    <li>営業電話はしません</li>
+   </ul>
+  </div>
+  <form class="sample-form" method="post" action="https://api.nyusatsu-fit.jp/signup" accept-charset="UTF-8">
+   <input type="hidden" name="consent_version" value="consent-v1-2026-09-03">
+   <div class="hp" aria-hidden="true"><label>このフィールドは空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+   <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.co.jp"></label>
+   <details class="opt">
+    <summary>自社条件で選別したサンプルをご希望の方（任意）</summary>
+    <p class="opt-note">会社名・法人番号をご記入いただくと、公的な資格者名簿の情報をもとに貴社向けの版を作成します。</p>
+    <label>会社名<input type="text" name="company_name" autocomplete="organization"></label>
+    <label>法人番号（13桁）<input type="text" name="corporate_number" inputmode="numeric" pattern="[0-9]{13}" title="13桁の数字"></label>
+   </details>
+   <label class="check"><input type="checkbox" name="consent" value="on" required><span>入札フィットからの無料サンプルと案内メールの受信に同意します。配信はいつでも停止できます（<a href="privacy.html">プライバシーポリシー</a>）。</span></label>
+   <button type="submit" class="cta" data-cta="form">無料で配信例を受け取る</button>
+   <p class="cta-note">フォームが使えない場合は <a href="mailto:info@nyusatsu-fit.jp">info@nyusatsu-fit.jp</a> へメールでも受け付けます。</p>
+  </form>
+ </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
-    <nav aria-label="フッター">
-      <a href="tokushoho.html">特定商取引法に基づく表記</a>
-      <a href="terms.html">利用規約</a>
-      <a href="refund.html">返金ポリシー</a><a href="guide/erabikata">入札情報サービスの選び方</a><a href="guide/toitsu-shikaku-tokyu-c">読みもの（入札参加資格の解説）</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-    </nav>
-    <address>運営: 入札フィット 運営事務局（<a href="tokushoho.html">特定商取引法に基づく表記</a>） ／ お問い合わせ: <a href="mailto:info@nyusatsu-fit.jp">info@nyusatsu-fit.jp</a></address>
-    <div class="sources">
-      本サービスは、官公需情報ポータルサイトの検索APIを利用しています（<a href="https://www.kkj.go.jp/" rel="noopener">官公需情報ポータルサイト</a>）。<br>
-      出典: <a href="https://www.p-portal.go.jp/" rel="noopener">調達ポータル</a>、<a href="https://www.e-gov.go.jp/" rel="noopener">e-Govポータル</a> ほか各発注機関の公表情報。<br>
-      掲載情報は入札フィット（運営: sprouthead.llc）が独自の基準で選別・編集・加工したもので、国等が作成した未加工の情報ではありません。
-    </div>
+ <div class="wrap">
+  <nav aria-label="フッター">
+   <a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a><a href="refund.html">返金ポリシー</a><a href="guide/erabikata">入札情報サービスの選び方</a><a href="guide/toitsu-shikaku-tokyu-c">読みもの（入札参加資格の解説）</a>
+  </nav>
+  <address>運営: 入札フィット 運営事務局（<a href="tokushoho.html">特定商取引法に基づく表記</a>） ／ お問い合わせ: <a href="mailto:info@nyusatsu-fit.jp">info@nyusatsu-fit.jp</a></address>
+  <div class="sources">
+   本サービスは、官公需情報ポータルサイトの検索APIを利用しています（<a href="https://www.kkj.go.jp/">官公需情報ポータルサイト</a>）。<br>
+   出典: <a href="https://www.p-portal.go.jp/">調達ポータル</a>、<a href="https://www.e-gov.go.jp/">e-Govポータル</a> ほか各発注機関の公表情報。<br>
+   掲載情報は入札フィット（運営: sprouthead.llc）が独自の基準で選別・編集・加工したもので、国等が作成した未加工の情報ではありません。
   </div>
+ </div>
 </footer>
 
+<div class="sticky" id="sticky" aria-hidden="true"><a class="cta" href="#sample" tabindex="-1" data-cta="sticky">無料で配信例を受け取る</a></div>
+<script>
+(function(){
+ var s=document.getElementById('sticky'); if(!s||!('IntersectionObserver' in window)) return;
+ var hero=document.querySelector('[data-cta="hero"]'), form=document.getElementById('sample'), closing=document.querySelector('footer');
+ var vis={hero:true,form:false,closing:false};
+ function upd(){var show=!vis.hero&&!vis.form&&!vis.closing; s.classList.toggle('show',show); s.setAttribute('aria-hidden',show?'false':'true'); s.querySelector('a').tabIndex=show?0:-1;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.target===hero) vis.hero=e.isIntersecting; else if(e.target===form) vis.form=e.isIntersecting; else vis.closing=e.isIntersecting;});upd();});
+ [hero,form,closing].forEach(function(el){el&&io.observe(el);});
+})();
+document.querySelectorAll('.sample-form input').forEach(function(i){i.addEventListener('invalid',function(){var d=i.closest('details');if(d)d.open=true;});});
+</script>
 </body>
 </html>
