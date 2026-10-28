@@ -539,6 +539,7 @@ a,td{overflow-wrap:anywhere}
   </div>
   <form class="sample-form" method="post" action="https://api.nyusatsu-fit.jp/signup" accept-charset="UTF-8">
    <input type="hidden" name="consent_version" value="consent-v1-2026-09-03">
+   <input type="hidden" name="attribution" value="">
    <div class="hp" aria-hidden="true"><label>このフィールドは空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
    <label>メールアドレス<span class="req">必須</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.co.jp"></label>
    <details class="opt">
@@ -582,6 +583,16 @@ a,td{overflow-wrap:anywhere}
  [hero,form,closing].forEach(function(el){el&&io.observe(el);});
 })();
 document.querySelectorAll('.sample-form input').forEach(function(i){i.addEventListener('invalid',function(){var d=i.closest('details');if(d)d.open=true;});});
+// 流入元（utm 3 種・外部参照元のホスト名・最後に押した data-cta）を申込に添える。Cookie・localStorage は使わない
+(function(){
+ var f=document.querySelector('.sample-form'), a=f&&f.querySelector('input[name="attribution"]'); if(!a) return;
+ function t(v){v=String(v||'').trim().toLowerCase(); return /^[a-z0-9._-]{1,64}$/.test(v)?v:'';}
+ var o={}, q=new URLSearchParams(location.search);
+ ['utm_source','utm_medium','utm_campaign'].forEach(function(k){var v=t(q.get(k)); if(v) o[k]=v;});
+ try{var r=document.referrer?new URL(document.referrer).hostname.toLowerCase():''; if(r&&r!==location.hostname) o.ref_host=r;}catch(e){}
+ document.addEventListener('click',function(e){var c=e.target&&e.target.closest?e.target.closest('[data-cta]'):null; if(c&&c.getAttribute('data-cta')!=='form'){var v=t(c.getAttribute('data-cta')); if(v) o.cta=v;}});
+ f.addEventListener('submit',function(){a.value=Object.keys(o).length?JSON.stringify(o):'';});
+})();
 </script>
 </body>
 </html>
